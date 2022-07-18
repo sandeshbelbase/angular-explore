@@ -1,0 +1,43 @@
+<h2 mat-dialog-title>Nepali people, western lifestyle</h2>
+<div mat-dialogue-content>
+  <form [formGroup]="personForm">
+    <mat-form-field appearance="outline">
+      <mat-label>FullName</mat-label>
+      <input formControlName="fullname" matInput placeholder="Placeholder" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput placeholder="Placeholder" />
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Gender</mat-label>
+      <mat-select formControlName="gender" placeholder="genfer">
+        <mat-option value="value">Male </mat-option>
+        <mat-option value="value">Female </mat-option>
+        <mat-option value="value">Other </mat-option>
+      </mat-select>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Message</mat-label>
+      <textarea
+        formControlName="message"
+        matInput
+        placeholder="meaasge here....."
+      >
+      </textarea>
+      <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    </mat-form-field>
+  </form>
+</div>
+
+<div mat-dialog-actions [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Cancle</button>
+  <button mat-raised-button color="primary" (click)="addPerson()">
+    Submit
+  </button>
+</div>
